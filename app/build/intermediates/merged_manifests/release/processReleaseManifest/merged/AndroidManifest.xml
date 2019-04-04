@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.grupomarostica.cloure"
+    android:versionCode="13"
+    android:versionName="13" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="pub-4373068067716420" />
+
+        <activity
+            android:name="com.grupomarostica.cloure.LoginActivity"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.grupomarostica.cloure.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.grupomarostica.cloure.BarcodeScanActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.bands_artists.BandsArtistsAddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.finances.FinancesAddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.my_account.MyAccountChangePassActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.products_services.ProductServiceAdd" />
+        <activity android:name="com.grupomarostica.cloure.Modules.products_services_categories.ProductCategoryN1AddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.products_services_categories.ProductCategoryN2AddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.maintenance_shifts.MaintenanceShiftsAddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.maintenance_shifts.MaintenanceShiftsFinishActivity" />
+        <activity android:name="com.grupomarostica.cloure.RegistrationActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.users.UserAddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.users.UserSelection" />
+        <activity android:name="com.grupomarostica.cloure.Modules.users_groups.UsersGroupsAddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.maintenance_equipments_brands.MaintenanceEquipmentBrandAddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.maintanance_equipments_types.MaintananceEquipmentTypeAddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.transports.TransportAddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.receipts.ReceiptsDetailsActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.banks.BankAddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.credit_cards.CreditCardAddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.debit_cards.DebitCardAddActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.products_services.ProductsServicesPickerActivity" />
+        <activity android:name="com.grupomarostica.cloure.FiltersActivity" />
+        <activity android:name="com.grupomarostica.cloure.WebViewActivity" />
+        <activity android:name="com.grupomarostica.cloure.SplashActivity" />
+        <activity android:name="com.grupomarostica.cloure.Modules.company_branches.CompanyBranchesAddActivity" />
+
+        <meta-data
+            android:name="android.support.VERSION"
+            android:value="26.1.0" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.android.billingclient.api.ProxyBillingActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="android.arch.lifecycle.VERSION"
+            android:value="27.0.0-SNAPSHOT" />
+    </application>
+
+</manifest>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Modules.finances.FinancesAddActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/constraintLayout5"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimary"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <ImageButton
+        android:id="@+id/finances_add_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:contentDescription="Agregar"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_check_black_24dp" />
+  </android.support.constraint.ConstraintLayout>
+
+  <TextView
+      android:id="@+id/textView4"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      android:text="Operación"
+      android:textAlignment="center"
+      app:layout_constraintEnd_toStartOf="@+id/guideline3"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+  <android.support.constraint.Guideline
+      android:id="@+id/guideline3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.5" />
+
+  <TextView
+      android:id="@+id/textView8"
+      android:layout_width="176dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      android:text="Forma de pago"
+      android:textAlignment="center"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/guideline3"
+      app:layout_constraintTop_toBottomOf="@+id/constraintLayout5" />
+
+  <Spinner
+      android:id="@+id/finances_add_txt_operation"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toStartOf="@+id/guideline3"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+  <Spinner
+      android:id="@+id/finances_add_txt_pm"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/guideline3"
+      app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+  <android.support.design.widget.TextInputLayout
+      android:id="@+id/textInputLayout23"
+      android:layout_width="176dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@+id/guideline3"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout24">
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/finances_add_txt_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Importe"
+        android:inputType="numberDecimal" />
+  </android.support.design.widget.TextInputLayout>
+
+  <android.support.design.widget.TextInputLayout
+      android:id="@+id/textInputLayout24"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/finances_add_txt_pm">
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/finances_add_txt_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción" />
+  </android.support.design.widget.TextInputLayout>
+</android.support.constraint.ConstraintLayout>

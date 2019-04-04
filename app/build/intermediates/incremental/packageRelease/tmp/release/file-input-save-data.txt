@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Sun Dec 16 00:03:51 ART 2018
+0.baseType=DIRECTORY
+0.base=J\:\\projects\\Android\\Cloure\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+0.path=classes.dex
+0.set=DEX
+count=1

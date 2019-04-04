@@ -1,0 +1,4 @@
+#Sat Jan 12 20:13:40 ART 2019
+base.0=J\:\\projects\\Android\\Cloure\\app\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

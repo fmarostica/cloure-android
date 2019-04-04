@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <TextView
+        android:id="@+id/users_adapter_v3_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/sintony"
+        android:text="@string/full_name"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/users_adapter_v3_phone"
+        app:layout_constraintEnd_toStartOf="@+id/users_adapter_v3_delete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/users_adapter_v3_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/users_adapter_v3_name" />
+
+    <ImageButton
+        android:id="@+id/users_adapter_v3_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/viewfinder_laser"
+        android:padding="5dp"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/users_adapter_v3_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/users_adapter_v3_name"
+        app:layout_constraintTop_toTopOf="@+id/users_adapter_v3_name"
+        app:srcCompat="@drawable/ic_close_black_24dp" />
+</android.support.constraint.ConstraintLayout>

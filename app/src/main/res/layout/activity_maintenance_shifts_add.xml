@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Modules.maintenance_shifts.MaintenanceShiftsAddActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+  <android.support.constraint.ConstraintLayout
+      android:id="@+id/activity_maintenance_shift_add_toolbar"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimary"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <ImageButton
+        android:id="@+id/activity_maintenance_shift_add_btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimary"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_check_black_24dp" />
+  </android.support.constraint.ConstraintLayout>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginTop="8dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/activity_maintenance_shift_add_toolbar">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/maintenance_shifts_add_txt_date_container"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="8dp"
+          app:layout_constraintEnd_toStartOf="@+id/maintenance_shifts_add_txt_time_container"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/maintenance_shifts_add_txt_date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="Fecha"
+            android:inputType="date"
+            android:maxLines="1" />
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/maintenance_shifts_add_txt_time_container"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="8dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/maintenance_shifts_add_txt_date_container"
+          app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/maintenance_shifts_add_txt_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="Hora"
+            android:inputType="date"
+            android:maxLines="1" />
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/maintenance_shift_add_txtCustomerContainer"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="8dp"
+          app:layout_constraintEnd_toStartOf="@+id/maintenance_shift_add_btn_add_user"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/maintenance_shifts_add_txt_date_container">
+
+        <AutoCompleteTextView
+            android:id="@+id/maintenanche_shifts_add_txt_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cliente"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:lines="1" />
+      </android.support.design.widget.TextInputLayout>
+
+      <ImageButton
+          android:id="@+id/maintenance_shift_add_btn_add_user"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="8dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/maintenance_shift_add_txtCustomerContainer"
+          app:layout_constraintTop_toBottomOf="@+id/maintenance_shifts_add_txt_date_container"
+          app:srcCompat="@drawable/ic_add_black_24dp" />
+
+      <TextView
+          android:id="@+id/maintenance_shift_add_tvAddress"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginTop="8dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/maintenance_shift_add_txtCustomerContainer" />
+
+      <TextView
+          android:id="@+id/mainenance_shift_add_tvPhone"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="8dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/maintenance_shift_add_tvAddress"/>
+
+
+
+
+
+      <TextView
+          android:id="@+id/activity_maintenance_shift_add_lbl_et"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="8dp"
+          android:text="Tipo de equipo"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/mainenance_shift_add_tvPhone" />
+
+      <Spinner
+          android:id="@+id/maintenance_shifts_txt_euipments_types"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginEnd="8dp"
+          app:layout_constraintBottom_toBottomOf="@+id/maintenance_shift_add_btn_add_equip"
+          app:layout_constraintEnd_toStartOf="@+id/maintenance_shift_add_btn_add_equip"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/maintenance_shift_add_btn_add_equip" />
+
+      <ImageButton
+          android:id="@+id/maintenance_shift_add_btn_add_equip"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="8dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/activity_maintenance_shift_add_lbl_et"
+          app:srcCompat="@drawable/ic_add_black_24dp" />
+
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/maintenance_shifts_txt_issue_desc_container"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+
+          android:layout_marginTop="8dp"
+          android:layout_marginEnd="8dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/maintenance_shifts_txt_euipments_types">
+
+        <EditText
+            android:id="@+id/maintenance_shifts_txt_issue_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Tipo de equipo"
+            android:inputType="text" />
+      </android.support.design.widget.TextInputLayout>
+    </android.support.constraint.ConstraintLayout>
+  </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
